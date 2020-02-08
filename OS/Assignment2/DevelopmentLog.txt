@@ -1,0 +1,348 @@
+[liveuser@localhost-live ~]$ bash
+[liveuser@localhost-live ~]$ gedit add.sh
+[liveuser@localhost-live ~]$ chmod +x add.sh
+[liveuser@localhost-live ~]$ ./add.sh
+Enter Name: Aditya
+Phone Number: xxxxx xxxxx
+Address: pune
+[liveuser@localhost-live ~]$ gedit AddressBook.txt 
+[liveuser@localhost-live ~]$ cd Documents/AddressBook/
+[liveuser@localhost-live AddressBook]$ ls
+AddressBook.txt  add.sh
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ chmod +x menu.sh
+[liveuser@localhost-live AddressBook]$ gedit display.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+[liveuser@localhost-live AddressBook]$ ./display.sh
+Aditya		xxxxx xxxxx		pune
+[liveuser@localhost-live AddressBook]$ mongodb
+bash: mongodb: command not found...
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1
+./menu.sh: line 13: [1: command not found
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1
+./menu.sh: line 13: 1: command not found
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1
+./menu.sh: line 13: 1: command not found
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1
+./menu.sh: line 13: 1: command not found
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1
+./menu.sh: line 13: [1: command not found
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1
+./menu.sh: line 15: add.sh: command not found
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1
+./menu.sh: line 15: add.sh: command not found
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+1/2/3/4 :1   
+Enter Name: Bill
+Phone Number: 94xxxxxxxx12
+Address: pune
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ gedit delete.sh
+[liveuser@localhost-live AddressBook]$ gedit search.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :1
+./menu.sh: line 29: syntax error near unexpected token `else'
+./menu.sh: line 29: `else'
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :1
+Enter Name: ishan
+Phone Number: xxxxxxxxxx
+Address: pune
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :4
+Aditya		xxxxx xxxxx		pune
+Bill		94xxxxxxxx12		pune
+ishan		xxxxxxxxxx		pune
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :3
+Enter name to search: ishan
+not found
+[liveuser@localhost-live AddressBook]$ gedit search.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :3
+Enter name to search: ishan
+Record at line number 3
+[liveuser@localhost-live AddressBook]$ gedit search.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :3
+Enter name to search: adi
+not found
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :2
+Enter name for deleting: adi
+sed: can't read Addressbook.txt: No such file or directory
+[liveuser@localhost-live AddressBook]$ gedit delete.sh
+[liveuser@localhost-live AddressBook]$ gedit search.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :3
+Enter name to search: adi
+not found
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :2
+Enter name for deleting: adi
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :4
+Aditya		xxxxx xxxxx		pune
+Bill		94xxxxxxxx12		pune
+ishan		xxxxxxxxxx		pune
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :2
+Enter name for deleting: Aditya
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :4
+Bill		94xxxxxxxx12		pune
+ishan		xxxxxxxxxx		pune
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4 :5
+bye
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4/5 :5
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4/5 :1
+1/2/3/4/5 :5 
+bye
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+./menu.sh: line 13: [: -ne: unary operator expected
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4/5 :1
+Enter Name: Aditya
+Phone Number: xxxxx xxxxx
+Address: pune
+1/2/3/4/5 :4
+Bill		94xxxxxxxx12		pune
+ishan		xxxxxxxxxx		pune
+Aditya		xxxxx xxxxx		pune
+1/2/3/4/5 :3
+Enter name to search: bill
+Record at line number 1
+1/2/3/4/5 :4
+Bill		94xxxxxxxx12		pune
+ishan		xxxxxxxxxx		pune
+Aditya		xxxxx xxxxx		pune
+1/2/3/4/5 :2
+Enter name for deleting: IsHaN
+1/2/3/4/5 :4
+Bill		94xxxxxxxx12		pune
+ishan		xxxxxxxxxx		pune
+Aditya		xxxxx xxxxx		pune
+1/2/3/4/5 :ishan
+./menu.sh: line 14: [: ishan: integer expression expected
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4/5 :3
+Enter name to search: ishan
+Record at line number 2
+1/2/3/4/5 :3   
+Enter name to search: ishan
+Record at line number 2
+1/2/3/4/5 :2
+Enter name for deleting: ishan
+1/2/3/4/5 :4
+Bill		94xxxxxxxx12		pune
+Aditya		xxxxx xxxxx		pune
+1/2/3/4/5 :5
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ gedit search.sh
+[liveuser@localhost-live AddressBook]$ gedit add.sh
+[liveuser@localhost-live AddressBook]$ gedit delete.sh
+[liveuser@localhost-live AddressBook]$ gedit delete.sh
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4/5 :4
+Bill		94xxxxxxxx12		pune
+Aditya		xxxxx xxxxx		pune
+1/2/3/4/5 :2
+Enter name for deleting: AdItYa
+1/2/3/4/5 :4
+Bill		94xxxxxxxx12		pune
+Aditya		xxxxx xxxxx		pune
+1/2/3/4/5 :5
+[liveuser@localhost-live AddressBook]$ display.sh
+bash: display.sh: command not found...
+[liveuser@localhost-live AddressBook]$ gedit display.sh
+[liveuser@localhost-live AddressBook]$ gedit menu.sh
+[liveuser@localhost-live AddressBook]$ ./menu
+bash: ./menu: No such file or directory
+[liveuser@localhost-live AddressBook]$ ./menu.sh
+#####menu#####
+1. Add Record
+2. Delete Record
+3. Search Record
+4. Display Address Book
+5. Exit
+1/2/3/4/5 :3
+Enter name to search: eh
+not found
+1/2/3/4/5 :5
+[liveuser@localhost-live AddressBook]$

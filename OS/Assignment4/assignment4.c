@@ -46,27 +46,20 @@ int main(){
                 case 1:
                         atbubbleSort(pr,size);
                         printf("process sequence: ");
-                        for(i=0;i<size;i++){
+                        for(i=0;i<size;i++)
                                 printf("%s\t",pr[i].process);
-                        }
                         printf("\n");
                         break;
                 case 2:
                         max = atbubbleSort(pr,size);
-                        for(i=0;i<max;i++){
-                                for(j=0;j<size;j++){
-                                        for(k=0;k<size-j-1;k++){
-                                                if(pr[k].at==i&&pr[k+1].at==i){
-                                                        if(pr[k].bt>pr[k+1].bt){
+                        for(i=0;i<max;i++)
+                                for(j=0;j<size;j++)
+                                        for(k=0;k<size-j-1;k++)
+                                                if(pr[k].at==i&&pr[k+1].at==i)
+                                                        if(pr[k].bt>pr[k+1].bt)
                                                                 swap(&pr[k],&pr[k+1]);
-                                                        }
-                                                }
-                                        }
-                                }
-                        }
-                        for(i=0;i<size;i++){
+                        for(i=0;i<size;i++)
                                 printf("%s\t",pr[i].process);
-                        }
                         printf("\n");
                         break;
                 case 3:

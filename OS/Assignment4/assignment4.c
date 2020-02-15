@@ -4,6 +4,7 @@ typedef struct Process {
         char process[10];
         int at;
         int bt;
+        int killed;
 }Pr;
 
 void swap(Pr *xp, Pr *yp)
@@ -23,19 +24,11 @@ int atbubbleSort(Pr arr[], int n)
       return arr[i].at;
 }
 
-void btbubbleSort(Pr arr[], int n)
-{
-        int i, j;
-        for (i = 0; i < n-1; i++)
-                for (j = 0; j < n-i-1; j++)
-                        if (arr[j].bt > arr[j+1].bt)
-                                swap(&arr[j], &arr[j+1]);
-}
-
 int main(){
-        int size,i,max,j,k;
+        int size,i,max,j,k,ts,killcount,time;
         printf("enter number of processes: ");
         scanf("%d",&size);
+        killcount = size;
         Pr* pr = (Pr*)malloc(size*sizeof(Pr));
         for(i=0;i<size;i++){
                 printf("Process name: ");
@@ -44,15 +37,8 @@ int main(){
                 scanf("%d",&pr[i].at);
                 printf("Burst Time: ");
                 scanf("%d",&pr[i].bt);
+                pr[i].killed = 0;
         }
-        /*for(i=0;i<size;i++){
-                printf("Process name: %s\n",pr[i].process);
-                //scanf("%s",pr[i].process);
-                printf("Arrival Time: %d\n",pr[i].at);
-                //scanf("%d",&pr[i].at);
-                printf("Burst Time: %d\n",pr[i].bt);
-                //scanf("%d",&pr[i].bt);
-        }*/
         //menu:
         printf("choose algotithm: \n1> FCFS\n2> SJF\n3> RR\n: ");
         scanf("%d",&i);
@@ -61,7 +47,7 @@ int main(){
                         atbubbleSort(pr,size);
                         printf("process sequence: ");
                         for(i=0;i<size;i++){
-			        printf("%s\t",pr[i].process);
+                                printf("%s\t",pr[i].process);
                         }
                         printf("\n");
                         break;
@@ -84,7 +70,23 @@ int main(){
                         printf("\n");
                         break;
                 case 3:
-
+                        time = 0;
+                        printf("enter timeslice: ");
+                        scanf("%d",&ts);
+                        printf("execution sequence:\nPrc\ttime\n");
+                        for(i=0;killcount != 0;i=(++i)%size){
+                                time++;
+                                if(pr[i].killed != 1 && pr[i].at<=time){
+                                        pr[i].bt = pr[i].bt - ts;
+                                        printf("%s\t%dus\n",pr[i].process,time);
+                                        time+=ts;
+                                        if(pr[i].bt<=0){
+                                                pr[i].killed = 1;
+                                                killcount--;
+                                        }
+                                }
+                        }
+                        printf("\n");
                         break;
                 default:
                         printf("invalid choice\n");
